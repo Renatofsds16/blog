@@ -1,0 +1,8 @@
+:root {
+    --clr-whith: hsl(213, 100%, 98%);
+    --teste: red;
+}
+
+body {
+    background-color: var(--clr-whith);
+}
