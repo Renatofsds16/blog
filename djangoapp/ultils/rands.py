@@ -9,8 +9,6 @@ def randon_letters(k=5):
     ))
 
 
-def slugify_new(text):
-    return slugify(text) + randon_letters()
+def slugify_new(text, k=5):
+    return slugify(text) + '-' + randon_letters(k)
 
-
-print(slugify_new('Blá bla atenaçao'))

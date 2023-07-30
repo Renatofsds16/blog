@@ -1,4 +1,5 @@
 from django.db import models
+from ultils.rands import slugify_new
 
 
 class Tag(models.Model):
@@ -13,5 +14,5 @@ class Tag(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = 'nova_string'
+            self.slug = slugify_new(self.name)
         return super().save(*args, **kwargs)
